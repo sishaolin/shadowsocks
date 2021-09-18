@@ -3,7 +3,7 @@
 cd ~
 
 if [ "$(which ss-server)" = "" ] ; then
-	apt install shadowsocks-libev
+	apt -y install shadowsocks-libev
 fi
 
 if [ ! -f /usr/local/bin/v2ray-plugin ] ; then
@@ -37,3 +37,4 @@ fi
 
 /etc/init.d/shadowsocks-libev status
 
+echo "maybe you shuld restart : /etc/init.d/shadowsocks-libev restart"
